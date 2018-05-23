@@ -1,3 +1,11 @@
+# IGNORE
+
+# IGNORE
+
+# IGNORE
+
+## Need to redo documentation for Webex Teams
+
 # Serverless Hotdog Detector
 
 This example shows you how to build a [serverless](https://aws.amazon.com/serverless/#getstarted) [hotdog detecting app](https://www.youtube.com/watch?v=ACmydtFDTGs) on AWS using [Amazon API Gateway](https://aws.amazon.com/api-gateway/), [AWS Lambda](https://aws.amazon.com/lambda/), and [Amazon Rekognition](https://aws.amazon.com/rekognition/).
