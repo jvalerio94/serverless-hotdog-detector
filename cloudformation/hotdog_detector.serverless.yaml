@@ -2,13 +2,13 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
 Parameters:
-  VerificationToken:
-    Description: Verification token from Slack app settings
+  BOT_TOKEN:
+    Description: Webex Teams Bot Authentication Token for Hotdog-Detector
     Type: String
     NoEcho: true
     
-  AccessToken:
-    Description: OAuth access token from Slack app settings
+  BOT_EMAIL:
+    Description: Webex Teams Bot Email for Hotdog-Detector
     Type: String
     NoEcho: true
 
@@ -54,7 +54,7 @@ Resources:
   HotdogDetectorFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Description: Checks Slack message.channels events for images. If an image is found uses Rekognition to determine if it contains a hotdog.
+      Description: Checks images sent to Hotdog-Detector Bot in Webex Teams and responds stating if the image is a hotdog or not.
       Handler: detect_hotdog.lambda_handler
       Runtime: python3.6
       CodeUri: ../lambda_functions/
@@ -74,6 +74,6 @@ Resources:
 
 Outputs:
   RequestURL:
-    Description: Prod URL for API to use as Request URL for Slack app
+    Description: Prod URL for API to use as Request URL for Webex Teams Bot
     Value: !Sub |-
        https://${HotdogDetectorAPI}.execute-api.${AWS::Region}.amazonaws.com/Prod/

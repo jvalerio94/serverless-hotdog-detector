@@ -8,7 +8,6 @@ This repository contains sample code the Lambda function depicted in the diagram
 
 To see some of the other real-world examples of Rekognition in action check out the [Image Recognition and Processing Backend Serverless reference architecture](https://github.com/awslabs/lambda-refarch-imagerecognition)
 
-![testing of example gif](images/TestingExample.gif)
 
 ## Walkthrough of the Architecture
 1. A user posts a message containing the image to perform hotdog detection on in a Slack channel monitored by the chat app.
@@ -18,7 +17,6 @@ To see some of the other real-world examples of Rekognition in action check out 
   1. The list of labels is checked for those corresponding to hotdogs to determine if the image contained a hotdog.
   1. A message is posted to the chat channel detailing whether the image was a hotdog or not.
 
-![screenshot for instruction](images/Architecture.png)
 
 ## Running the Example
 ### Preparing Slack
@@ -39,7 +37,7 @@ First make sure you're logged in to Slack, then follow these instructions to pre
 The backend infrastructure can be deployed in US West - Oregon (us-west-2) using the provided CloudFormation template.
 Click **Launch Stack** to launch the template in the US West - Oregon (us-west-2) region in your account:
 
-[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=HotdogDetector&templateURL=https://s3-us-west-2.amazonaws.com/aws-samples-hotdog-detector/hotdog_detector.output.yaml)
+[![Launch Stack into Oregon with CloudFormation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cloudformation-launch-stack-button.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=HotdogDetector&templateURL=https://s3-us-west-2.amazonaws.com/aws-samples-hotdog-detector/hotdog_detector.output.yaml)
 
 (On the last page of the wizard, make sure to:
 
