@@ -2,12 +2,12 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
 Parameters:
-  BOT_TOKEN:
+  BotToken:
     Description: Webex Teams Bot Authentication Token for Hotdog-Detector
     Type: String
     NoEcho: true
     
-  BOT_EMAIL:
+  BotEmail:
     Description: Webex Teams Bot Email for Hotdog-Detector
     Type: String
     NoEcho: true
@@ -60,8 +60,8 @@ Resources:
       CodeUri: ../lambda_functions/
       Environment:
         Variables:
-          VERIFICATION_TOKEN: !Ref VerificationToken
-          ACCESS_TOKEN: !Ref AccessToken
+          BOT_TOKEN: !Ref BotToken
+          BOT_EMAIL: !Ref BotEmail
       Events:
         HotdogDetectorAPIPost:
           Type: Api
